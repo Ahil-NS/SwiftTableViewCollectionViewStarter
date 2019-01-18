@@ -12,10 +12,15 @@ struct Technology {
     
     private(set) public var title: String
     private(set) public var imageName: String
+    var loved: Bool
     
-    init(title: String, imageName: String){
+    init(title: String, imageName: String, loved: Bool ){
         self.title = title
         self.imageName = imageName
+        self.loved = loved
     }
     
+    mutating func toggleLove(){
+        loved = !loved
+    }
 }

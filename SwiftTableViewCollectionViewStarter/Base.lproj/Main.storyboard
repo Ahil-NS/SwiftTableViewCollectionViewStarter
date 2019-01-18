@@ -22,28 +22,28 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId" rowHeight="163" id="dNF-tC-rhJ" customClass="TechnologyCell" customModule="SwiftTableViewCollectionViewStarter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId" rowHeight="163" id="dNF-tC-rhJ" customClass="TechnologyCell" customModule="SwiftTableViewCollectionViewStarter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="163"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dNF-tC-rhJ" id="98B-mO-ore">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-2g-ZkB">
-                                                    <rect key="frame" x="33" y="29.5" width="100" height="100"/>
+                                                    <rect key="frame" x="33" y="29" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="v2l-2g-ZkB" secondAttribute="height" multiplier="1:1" id="8LC-Si-ywb"/>
                                                         <constraint firstAttribute="width" constant="100" id="oih-bJ-7pT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3N-8k-nVf">
-                                                    <rect key="frame" x="151" y="69.5" width="191" height="30"/>
+                                                    <rect key="frame" x="151" y="69" width="159" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wic-X0-RjA">
-                                                    <rect key="frame" x="0.0" y="165.5" width="375" height="3"/>
+                                                    <rect key="frame" x="0.0" y="165" width="336" height="3"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="3" id="8wx-uI-7jM"/>
@@ -87,6 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Technology" id="T6a-Cu-Nhl"/>
                     <connections>
+                        <outlet property="technologyTableView" destination="a4X-5h-CX2" id="gAv-y6-FMg"/>
                         <segue destination="OZW-Ck-h7a" kind="show" identifier="toLanguage" id="seq-cp-JU7"/>
                     </connections>
                 </viewController>
