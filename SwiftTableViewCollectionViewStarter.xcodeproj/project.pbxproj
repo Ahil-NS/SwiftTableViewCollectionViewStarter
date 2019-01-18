@@ -15,6 +15,9 @@
 		FA32E9B521F09FFC00398DA4 /* TechnologyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32E9B421F09FFC00398DA4 /* TechnologyCell.swift */; };
 		FA32E9B721F0A00800398DA4 /* Technology.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32E9B621F0A00800398DA4 /* Technology.swift */; };
 		FA32E9BA21F0A12000398DA4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32E9B921F0A12000398DA4 /* DataService.swift */; };
+		FA7CB64021F1B17A0078CAF8 /* MainCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CB63F21F1B17A0078CAF8 /* MainCollectionVC.swift */; };
+		FA7CB64221F1B2480078CAF8 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CB64121F1B2480078CAF8 /* LanguageCell.swift */; };
+		FA7CB64421F1B3800078CAF8 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CB64321F1B3800078CAF8 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FA32E9B421F09FFC00398DA4 /* TechnologyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyCell.swift; sourceTree = "<group>"; };
 		FA32E9B621F0A00800398DA4 /* Technology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technology.swift; sourceTree = "<group>"; };
 		FA32E9B921F0A12000398DA4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		FA7CB63F21F1B17A0078CAF8 /* MainCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionVC.swift; sourceTree = "<group>"; };
+		FA7CB64121F1B2480078CAF8 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		FA7CB64321F1B3800078CAF8 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,11 @@
 		FA32E99921F09E3500398DA4 /* SwiftTableViewCollectionViewStarter */ = {
 			isa = PBXGroup;
 			children = (
+				FA7CB63E21F1B0C50078CAF8 /* Controllers */,
 				FA32E9B821F0A10500398DA4 /* Services */,
 				FA32E9B321F09FEB00398DA4 /* Cells */,
 				FA32E9B221F09FDC00398DA4 /* Model */,
 				FA32E99A21F09E3500398DA4 /* AppDelegate.swift */,
-				FA32E99C21F09E3500398DA4 /* MainTableVC.swift */,
 				FA32E99E21F09E3500398DA4 /* Main.storyboard */,
 				FA32E9A121F09E3600398DA4 /* Assets.xcassets */,
 				FA32E9A321F09E3600398DA4 /* LaunchScreen.storyboard */,
@@ -77,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				FA32E9B621F0A00800398DA4 /* Technology.swift */,
+				FA7CB64321F1B3800078CAF8 /* Language.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				FA32E9B421F09FFC00398DA4 /* TechnologyCell.swift */,
+				FA7CB64121F1B2480078CAF8 /* LanguageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -95,6 +103,15 @@
 				FA32E9B921F0A12000398DA4 /* DataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA7CB63E21F1B0C50078CAF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA32E99C21F09E3500398DA4 /* MainTableVC.swift */,
+				FA7CB63F21F1B17A0078CAF8 /* MainCollectionVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA32E9B521F09FFC00398DA4 /* TechnologyCell.swift in Sources */,
+				FA7CB64021F1B17A0078CAF8 /* MainCollectionVC.swift in Sources */,
 				FA32E99D21F09E3500398DA4 /* MainTableVC.swift in Sources */,
 				FA32E99B21F09E3500398DA4 /* AppDelegate.swift in Sources */,
 				FA32E9B721F0A00800398DA4 /* Technology.swift in Sources */,
+				FA7CB64421F1B3800078CAF8 /* Language.swift in Sources */,
+				FA7CB64221F1B2480078CAF8 /* LanguageCell.swift in Sources */,
 				FA32E9BA21F0A12000398DA4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

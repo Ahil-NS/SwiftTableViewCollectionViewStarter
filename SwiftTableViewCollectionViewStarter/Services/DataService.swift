@@ -16,8 +16,29 @@ class DataService{
                                  Technology(title: "Flutter", imageName: "flutter")]
 
     
+    private let iOSLang = [Language(title: "SWIFT", imageName: "ios"),
+                               Language(title: "Obj-C", imageName: "ios")]
+    
+    private let androidLang = [Language(title: "Java", imageName: "android"),
+                               Language(title: "Kotlin", imageName: "android")]
+    
+    private let flutterLang = [Language(title: "Dart", imageName: "flutter")]
+    
     func getTechnologies() -> [Technology]{
         return technologies
+    }
+    
+    func getLangage(forTechTitle title : String) -> [Language]{
+        switch title {
+        case "iOS":
+            return iOSLang
+        case "Android":
+            return androidLang
+        case "Flutter":
+            return flutterLang
+        default:
+            return []
+        }
     }
     
 }
