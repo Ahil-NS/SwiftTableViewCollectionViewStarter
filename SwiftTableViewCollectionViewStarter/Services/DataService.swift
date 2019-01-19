@@ -12,7 +12,7 @@ class DataService{
     static let instance = DataService()
     
     private var technologies =  [Technology(title: "iOS", imageName: "ios", loved: false),
-                                 Technology(title: "Android", imageName: "android", loved: false),
+                                 Technology(title: "Android", imageName: "android", loved: true),
                                  Technology(title: "Flutter", imageName: "flutter", loved: false)]
 
     
@@ -24,15 +24,17 @@ class DataService{
     
     private let flutterLang = [Language(title: "Dart", imageName: "flutter")]
     
-    func deleteTech(indexPath : IndexPath){
-        technologies.remove(at: indexPath.row)
+ 
+    func getTechnologies() -> [Technology]{
+        return technologies
     }
     
     func loveTechnology(indexpath: IndexPath){
         technologies[indexpath.row].loved = !technologies[indexpath.row].loved
     }
-    func getTechnologies() -> [Technology]{
-        return technologies
+    
+    func deleteTech(indexPath : IndexPath){
+        technologies.remove(at: indexPath.row)
     }
     
     func getLangage(forTechTitle title : String) -> [Language]{

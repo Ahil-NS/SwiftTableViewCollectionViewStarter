@@ -13,7 +13,6 @@ class LanguageCell: UICollectionViewCell {
     @IBOutlet weak var languageImageView: UIImageView!
     @IBOutlet weak var languageTitleLabel: UILabel!
     
-    
     func configureView(lang : Language){
         languageImageView.image = UIImage(named: lang.imageName)
         languageTitleLabel.text = lang.title

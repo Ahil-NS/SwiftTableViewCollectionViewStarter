@@ -26,28 +26,25 @@ extension MainTableVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as? TechnologyCell else {return TechnologyCell()}
-        cell.updateView(tech: DataService.instance.getTechnologies()[indexPath.row])
-        configureCheckMark(for: cell, at: indexPath)
+        configureView(for: cell, at: indexPath)
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if let cell = tableView.cellForRow(at: indexPath){
+        if let cell = tableView.cellForRow(at: indexPath) as? TechnologyCell{
             DataService.instance.loveTechnology(indexpath: indexPath)
-            configureCheckMark(for: cell, at: indexPath)
-       
+            configureView(for: cell, at: indexPath)
         }
         //let tech = DataService.instance.getTechnologies()[indexPath.row]
-       // performSegue(withIdentifier: "toLanguage", sender: tech)
+        // performSegue(withIdentifier: "toLanguage", sender: tech)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         DataService.instance.deleteTech(indexPath: indexPath)
         tableView.deleteRows(at: [indexPath], with: .automatic)
-        //technologyTableView.reloadData()
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,15 +59,9 @@ extension MainTableVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func configureCheckMark(for cell: UITableViewCell, at indexPath: IndexPath){
-        
+    func configureView(for cell: TechnologyCell, at indexPath: IndexPath){
         let items = DataService.instance.getTechnologies()[indexPath.row]
-        if(items.loved){
-            cell.accessoryType = .checkmark
-        }
-        else{
-            cell.accessoryType = .none
-        }
+        cell.updateView(tech: items)
     }
     
     

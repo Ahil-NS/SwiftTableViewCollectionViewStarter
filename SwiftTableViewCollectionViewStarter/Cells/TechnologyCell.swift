@@ -12,10 +12,11 @@ class TechnologyCell: UITableViewCell {
 
     @IBOutlet weak var techImageView: UIImageView!
     @IBOutlet weak var techTitleLabel: UILabel!
+    @IBOutlet weak var loveImageView: UIImageView!
     
     func updateView(tech: Technology){
         techImageView.image = UIImage(named: tech.imageName)
         techTitleLabel.text = tech.title
+        loveImageView.image = tech.loved ? #imageLiteral(resourceName: "icon_love") : #imageLiteral(resourceName: "icon_smile")
     }
-    
 }
